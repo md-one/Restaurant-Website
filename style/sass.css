@@ -1,6 +1,17 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'PT Serif', serif;
 }
 
 header {
@@ -14,6 +25,8 @@ header {
 header nav {
   padding: 10px 15%;
   height: 10vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 header nav img {
@@ -31,6 +44,74 @@ header nav ul a {
   color: white;
   font-size: 24px;
   margin: auto 15px;
+}
+
+header nav ul a:hover {
+  color: #CC9900;
+}
+
+header .intro {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .intro h1 {
+  color: #ffffff;
+  font-size: 90px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+header .intro img {
+  width: 40%;
+  height: auto;
+  margin: 30px auto;
+}
+
+header .intro .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 55%;
+}
+
+header .intro .buttons button {
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 18px 40px;
+  border: 2px solid #000;
+  color: #ffffff;
+}
+
+header .intro .buttons button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+header .intro .buttons button:nth-child(2) {
+  background: rgba(225, 225, 225, 0.3);
+  border: 2px solid #fff;
+}
+
+header .intro .buttons button:nth-child(2):hover {
+  background: rgba(225, 225, 225, 0.4);
 }
 
 .about {
@@ -57,17 +138,22 @@ header nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40%;
 }
 
-.about .contant h1 {
+.about .contant h2 {
   font-size: 36px;
   text-align: center;
+  color: #CC9900;
 }
 
 .about .contant p {
   font-size: 16px;
   text-align: center;
+  width: 60%;
 }
 
 .about .contant img {
@@ -84,17 +170,184 @@ header nav ul a {
   height: 80vh;
   width: 100%;
   background-image: url(images/Section2Background.png);
-  background-position: center;
+  background-position: top;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .Ingredients .contant {
   width: 30%;
-  height: 85%;
+  height: 75%;
   background: rgba(0, 0, 0, 0.5);
   position: relative;
   top: 50%;
-  left: 60%;
+  left: 65%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3% 0;
+}
+
+.Ingredients .contant .text {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Ingredients .contant .text h2 {
+  font-size: 36px;
+  text-align: center;
+  color: #ffffff;
+  margin: 16px auto;
+}
+
+.Ingredients .contant .text p {
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.Ingredients .contant .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.menu {
+  height: 100vh;
+  width: 100%;
+  background-image: url(images/pattern.png);
+  background-position: center;
+  background-size: cover;
+  -webkit-box-shadow: inset 0px 0px 20px #000;
+          box-shadow: inset 0px 0px 20px #000;
+}
+
+.menu .continer {
+  height: 100%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu .continer .appetisers,
+.menu .continer .starters,
+.menu .continer .salads,
+.menu .continer .mainDishes {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.menu .continer .appetisers h2,
+.menu .continer .starters h2,
+.menu .continer .salads h2,
+.menu .continer .mainDishes h2 {
+  font-size: 36;
+  color: #CC9900;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.menu .continer .appetisers img,
+.menu .continer .starters img,
+.menu .continer .salads img,
+.menu .continer .mainDishes img {
+  margin: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+
+.menu .continer .appetisers .dish,
+.menu .continer .starters .dish,
+.menu .continer .salads .dish,
+.menu .continer .mainDishes .dish {
+  margin-bottom: 20px;
+}
+
+.menu .continer .appetisers .dish h3,
+.menu .continer .starters .dish h3,
+.menu .continer .salads .dish h3,
+.menu .continer .mainDishes .dish h3 {
+  font-size: 23;
+  color: #CC9900;
+  margin: 0;
+}
+
+.menu .continer .appetisers .dish hr,
+.menu .continer .starters .dish hr,
+.menu .continer .salads .dish hr,
+.menu .continer .mainDishes .dish hr {
+  color: #CC9900;
+  margin: 10px 0;
+  width: 90%;
+}
+
+.menu .continer .appetisers .dish p,
+.menu .continer .starters .dish p,
+.menu .continer .salads .dish p,
+.menu .continer .mainDishes .dish p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.reviews {
+  height: 80vh;
+  width: 100%;
+  background-image: url(images/bg.png);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.reviews .contant {
+  width: 50%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.9);
+  position: relative;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: -webkit-box;
@@ -107,31 +360,156 @@ header nav ul a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
 }
 
-.Ingredients .contant h1 {
+.reviews .contant h2 {
   font-size: 36px;
   text-align: center;
   color: #ffffff;
+  margin: 16px auto;
 }
 
-.Ingredients .contant p {
-  font-size: 16px;
+.reviews .contant p {
+  font-size: 25px;
   text-align: center;
-  color: #ffffff;
-  width: 90%;
+  width: 80%;
+  line-height: 160%;
 }
 
-.Ingredients .contant .img {
+.Reservations {
+  height: 80vh;
+  width: 100%;
+  background-image: url(images/contactBG.png);
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Reservations .contact {
+  height: 80%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Reservations .contact h2 {
+  font-size: 36;
+  color: #CC9900;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.Reservations .contact p {
+  font-size: 16px;
+  width: 70%;
+  text-align: center;
+}
+
+.Reservations .contact form {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Reservations .contact form div {
+  margin: 10px;
+}
+
+.Reservations .contact form div label {
+  font-size: 14px;
+  color: #CC9900;
+}
+
+.Reservations .contact form div label h6 {
+  font-size: 14px;
+  color: #CC9900;
+  margin: 15px auto 5px;
+}
+
+.Reservations .contact form div input {
+  font-size: 16px;
+  padding: 10px 10px;
+  background: rgba(225, 225, 225, 0.4);
+  border: 1px solid #C8C6C6;
+}
+
+.Reservations .contact form div input:focus {
+  border: 1px solid #CC9900;
+  outline: #CC9900;
+}
+
+.Reservations .contact button {
+  color: #fff;
+  background: #CC9900;
+  border: 0;
+  font-size: 16px;
+  padding: 10px 60px;
+  margin: 15px auto;
+}
+
+.Reservations .contact button:focus {
+  outline: 0;
+}
+
+.Reservations .contact button::hover {
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 35vh;
+  background: #000;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 1fr 1fr 1fr 20%;
+      grid-template-columns: 20% 1fr 1fr 1fr 20%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer .aboutUs,
+footer .openingHours,
+footer .location {
+  text-align: center;
+  color: #fff;
+}
+
+footer .aboutUs {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+footer .openingHours {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+footer .location {
+  -ms-grid-column: 4;
+  grid-column: 4;
 }
 /*# sourceMappingURL=sass.css.map */

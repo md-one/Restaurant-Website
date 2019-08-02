@@ -111,7 +111,7 @@ header {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 
     .contant {
         display: flex;
@@ -124,12 +124,14 @@ header {
             font-size: 36px;
             text-align: center;
             color: #CC9900;
+            margin: 15px auto 15px;
         }
 
         p {
             font-size: 16px;
             text-align: center;
             width: 60%;
+            margin: 0 auto 30px;
         }
 
         img {
@@ -363,6 +365,7 @@ header {
                     padding: 10px 10px;
                     background: rgba(225, 225, 225, 0.4);
                     border: 1px solid #C8C6C6;
+                    padding: 10px;
 
                     &:focus {
                         border: 1px solid #CC9900;
@@ -404,6 +407,15 @@ footer {
     .location {
         text-align: center;
         color: #fff;
+
+        .icons {
+
+            img {
+                height: 2em;
+                width: auto;
+                margin: auto 5px;
+            }
+        }
     }
 
     .aboutUs {
@@ -418,3 +430,5 @@ footer {
         grid-column: 4;
     }
 }
+
+@import "./media";

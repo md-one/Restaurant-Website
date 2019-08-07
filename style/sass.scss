@@ -385,7 +385,7 @@ header {
                 outline: 0;
             }
 
-            &::hover {
+            &:hover {
                 cursor: pointer;
             }
         }
@@ -412,6 +412,10 @@ footer {
                 height: 2em;
                 width: auto;
                 margin: auto 5px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
